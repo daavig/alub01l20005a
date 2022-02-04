@@ -1,0 +1,19 @@
+server {
+  server_name redirect.alub01l20005a.me;
+  return 301 http://target.alub01l20005a.me;
+
+  location /test {
+    return 301 http://target.alub01l20005a.me;
+  }
+
+  location /probando {
+    return 301 http://target.alub01l20005a.me;
+  }
+
+  location /hola {
+    return 301 http://target.alub01l20005a.me;
+  }
+
+  access_log /var/log/nginx/redirect/access.log;
+  error_log /var/log/nginx/redirect/error.log;
+}

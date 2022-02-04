@@ -1,0 +1,12 @@
+server {
+	server_name now.alub01l20005a.me;
+	
+	location / {
+		uwsgi_pass 127.0.0.1:8081;
+		include uwsgi_params;
+	}
+
+	location /static {
+		root /home/alub01l20005a/webapps/now;
+	}
+}

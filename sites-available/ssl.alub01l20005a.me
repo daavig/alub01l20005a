@@ -1,0 +1,12 @@
+server{
+   server_name ssl.alub01l20005a.me;
+   location /students {
+       root /home/alub01l20005a/webapps;
+       auth_basic "Restricted Access";
+       auth_basic_user_file /home/alub01l20005a/webapps/students/.htpasswd; 
+   }
+   
+   location ~ \.htpasswd{
+       return 403;
+   }
+}
